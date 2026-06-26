@@ -22,3 +22,27 @@ to get these projects running on your machine.
 The API page is not always easy to read at first,
 but it becomes useful as you get more comfortable with project structure,
 modules, functions, and docstrings.
+
+## Custom Project: P7 Regression Analysis
+
+### Penguins Regression Example
+
+The penguins example shows a fairly clear use case for linear regression. In this model, the feature variable is `flipper_length_mm`, and the target variable is `body_mass_g`. The purpose is to see whether flipper length can help predict body mass.
+
+This relationship makes sense because larger penguins generally have longer flippers and higher body mass. The model produced a fitted regression line and an R-squared value around 0.759, which means the line explains a substantial amount of the variation in body mass. The RMSE was about 393 grams, meaning the model’s predictions are typically off by about that amount.
+
+Based on the fitted line, R-squared value, and residual plot, this appears to be a reasonable example of linear regression. It is not perfect, but the relationship is clear enough that the model provides useful insight.
+
+### CO₂ Regression Example
+
+The CO₂ example is less clear. In this model, the feature variable is `gdp`, and the target variable is `co2`. The purpose is to explore whether GDP can help predict CO₂ emissions.
+
+The model had a high R-squared value around 0.956, which suggests that GDP explains a large amount of the variation in CO₂ emissions. However, a high R-squared does not automatically mean the model is the best explanation. The residual plot and context matter. CO₂ emissions are influenced by many factors beyond GDP, including population size, year, industrial activity, energy sources, environmental policy, and technological changes.
+
+A possible reason this relationship is less clear is that different countries and different years are being combined into one model. A country’s GDP may increase over time, but its CO₂ emissions may rise, fall, or level off depending on energy policy, renewable energy use, industrial structure, and efficiency improvements. This means GDP alone may not fully explain CO₂ emissions in a simple straight-line relationship.
+
+### Additional Analysis Plan
+
+If I had more time, I would explore the CO₂ data by adding more context. I would separate the data by year or country to see whether the relationship changes over time or across places. I would also consider adding other variables, such as population, energy use, or CO₂ per capita. Another option would be to test whether a transformed variable, such as log GDP, gives a better fit.
+
+My conclusion is that the penguins example is a cleaner demonstration of linear regression, while the CO₂ example shows why analysts need to look beyond one number. Even when a model has a strong R-squared value, it is still important to review the residuals, understand the data context, and ask whether the selected feature truly explains the target.
